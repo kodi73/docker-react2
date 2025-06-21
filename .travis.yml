@@ -7,3 +7,13 @@ before_install:
 
 script:
   - docker run -e CI=true kodi73/docker-react2 npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-south-1"
+  app: "docker"
+  env: "Docker-env"
+  bucket_name: "elasticbeanstalk-ap-south-1-738861171381"
+  bucket_path: "docker"
+  on:
+    branch: master
