@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t kodi73/docker-react2 -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true kodi73/docker-react2 npm run test
