@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          I want a pussy.
+          I want a <a href="pornhub.com">pussy</a>.
         </p>
         <a
           className="App-link"
